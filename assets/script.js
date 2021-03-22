@@ -46,9 +46,9 @@
      // add entire list item to list
      tasksToDoEl.appendChild(listItemEl);
 
-   }
+   };
 
-   formEl.addEventListener("submit", taskFormHandler);
+   formEl.addEventListener("submit" , taskFormHandler);
 
 
     
