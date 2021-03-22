@@ -1,14 +1,19 @@
-    const buttonEl = document.querySelector("#save-task")
-    const tasksToDoEl = document.querySelector("#tasks-to-do")
+    
+    var tasksToDoEL = document.querySelector("#tasksto")
+
+    var formEL = document.querySelector("#task-form")
 
     
      
-    const createTaskHandler = () => {
-        let listItemEL = document.createElement("li");
-        listItemEL.className = "task-item";
-        listItemEL.textContent = "This is a new task";
-        tasksToDoEl.appendChild(listItemEL);
-    }
+    const createTaskHandler = function(event) {
 
-    buttonEl.addEventListener("click", createTaskHandler
-    );
+        event.preventDefault();
+
+        var listItemEL = document.createElement("li");
+        listItemEL.className = "task-item";
+        listItemEL.textContent = "This is a new task.";
+        tasksToDoEL.appendChild(listItemEL);
+
+    };
+
+    formEL.addEventListener("submit", createTaskHandler);
